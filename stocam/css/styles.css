@@ -224,7 +224,6 @@ header p {
 }
 
 .idea-card__header h3::before {
-  content: "✨";
   margin-right: 8px;
 }
 
