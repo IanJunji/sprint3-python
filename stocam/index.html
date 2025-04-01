@@ -3,202 +3,860 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>STOCAM - Projeto de Monitoramento de Estoque</title>
-    <style>
-      body {
-        font-family: Arial, sans-serif;
-        line-height: 1.6;
-        margin: 0;
-        padding: 20px;
-        max-width: 800px;
-        margin: 0 auto;
-        color: #333;
-      }
-      h1 {
-        color: #005a87;
-        border-bottom: 2px solid #005a87;
-        padding-bottom: 10px;
-      }
-      h2 {
-        color: #005a87;
-        margin-top: 30px;
-      }
-      ul,
-      ol {
-        padding-left: 20px;
-      }
-      li {
-        margin-bottom: 10px;
-      }
-      .section {
-        margin-bottom: 30px;
-      }
-      .tip {
-        background-color: #f0f7ff;
-        border-left: 4px solid #005a87;
-        padding: 10px 15px;
-        margin-bottom: 15px;
-      }
-      .tip h3 {
-        margin-top: 0;
-        color: #005a87;
-      }
-    </style>
+    <meta
+      name="description"
+      content="STOCAM - Sistema de Monitoramento Inteligente de Estoque Hospitalar para o Hospital Sabará, utilizando câmeras, IA e rastreamento."
+    />
+    <meta
+      name="keywords"
+      content="estoque hospitalar, monitoramento inteligente, IA, visão computacional, Python, hospital, medicamentos"
+    />
+    <meta name="author" content="Equipe STOCAM" />
+    <title>STOCAM - Monitoramento Inteligente de Estoque Hospitalar</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
   </head>
   <body>
-    <h1>Projeto STOCAM</h1>
-    <p>Monitoramento Inteligente de Estoque Hospitalar - Hospital Sabará</p>
+    <header>
+      <div>
+        <h1>Projeto STOCAM</h1>
+        <p>Monitoramento Inteligente de Estoque Hospitalar - Hospital Sabará</p>
+      </div>
+    </header>
 
-    <div class="section">
-      <h2>Objetivo do Projeto</h2>
-      <p>
-        Criar um sistema de monitoramento de estoque de medicamentos para o
-        Hospital Sabará, utilizando câmeras e inteligência artificial para
-        controle automático e em tempo real.
-      </p>
+    <div class="container">
+      <aside class="sidebar">
+        <h2>Navegação</h2>
+        <ul>
+          <li><a href="#objetivo">Objetivo do Projeto</a></li>
+          <li><a href="#recursos">Principais Recursos</a></li>
+          <li><a href="#etapas">Macro-etapas</a></li>
+          <li><a href="#ideias">Ideias e Sugestões</a></li>
+          <li><a href="#python">Python & Implementação</a></li>
+          <li><a href="#ct">Computational Thinking</a></li>
+          <li><a href="#consideracoes">Considerações Adicionais</a></li>
+        </ul>
+      </aside>
+
+      <main class="main-content">
+        <div class="intro-cards">
+          <div id="objetivo" class="card">
+            <h2>🎯 Objetivo do Projeto</h2>
+            <p>
+              Criar um sistema
+              <span class="highlight">robusto e eficiente</span> de
+              monitoramento de estoque de medicamentos para o Hospital Sabará,
+              utilizando <span class="highlight">câmeras</span>,
+              <span class="highlight">inteligência artificial</span> e
+              <span class="highlight">rastreamento</span> para automatizar o
+              controle, reduzir erros, otimizar a reposição e garantir a
+              segurança do paciente.
+            </p>
+          </div>
+
+          <div id="recursos" class="card">
+            <h2>💎 Principais Recursos (Core)</h2>
+            <ul>
+              <li>
+                <span class="pill">📷 Monitoramento por Câmeras</span>
+                <span class="pill">🤖 Análise com IA</span>
+                <span class="pill">🏷️ Etiquetas Rastreáveis</span>
+                <span class="pill">📊 Dashboard</span>
+              </li>
+            </ul>
+          </div>
+
+          <div id="etapas" class="card">
+            <h2>📅 Macro-etapas do Projeto</h2>
+            <div class="timeline">
+              <div class="timeline-item">
+                <span class="phase-badge">Fase 1</span>
+                <strong>Planejamento:</strong> Detalhar requisitos, definir
+                escopo, escolher tecnologias, planejar cronograma e tarefas.
+                <div class="priority-tag priority-high">Crítica</div>
+              </div>
+              <div class="timeline-item">
+                <span class="phase-badge">Fase 2</span>
+                <strong>Design:</strong> Criar protótipos de interface (UI/UX),
+                modelar banco de dados, definir arquitetura do sistema.
+                <div class="priority-tag priority-medium">Média Prioridade</div>
+              </div>
+              <div class="timeline-item">
+                <span class="phase-badge">Fase 3</span>
+                <strong>Desenvolvimento IA:</strong> Pesquisar/treinar modelos
+                de visão computacional, desenvolver algoritmos de contagem e
+                reconhecimento.
+                <div class="priority-tag priority-medium">Média Prioridade</div>
+              </div>
+              <div class="timeline-item">
+                <span class="phase-badge">Fase 4</span>
+                <strong>Desenvolvimento Back-end:</strong> Implementar APIs,
+                lógica de negócio, integração com BD, sistema de alertas.
+                <div class="priority-tag priority-medium">Média Prioridade</div>
+              </div>
+              <div class="timeline-item">
+                <span class="phase-badge">Fase 5</span>
+                <strong>Desenvolvimento Front-end:</strong> Implementar
+                dashboard, visualizações de dados, interface do usuário.
+                <div class="priority-tag priority-medium">Média Prioridade</div>
+              </div>
+              <div class="timeline-item">
+                <span class="phase-badge">Fase 6</span>
+                <strong>Integração e Testes:</strong> Integrar componentes
+                (Hardware+IA+Back+Front), realizar testes unitários, integrados
+                e de usabilidade.
+                <div class="priority-tag priority-medium">Média Prioridade</div>
+              </div>
+              <div class="timeline-item">
+                <span class="phase-badge">Fase 7</span>
+                <strong>Implantação e Apresentação:</strong> Preparar ambiente,
+                implantar (simulado ou real), preparar e realizar apresentação
+                final.
+                <div class="priority-tag priority-high">Alta Prioridade</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <h2 id="ideias" class="section-title">
+          Ideias, Tecnologias e Sugestões Detalhadas
+        </h2>
+
+        <div class="ideas-grid">
+          <div class="idea-card">
+            <div class="idea-card__header">
+              <h3>✨ Ideia 1: Reconhecimento Híbrido (Visão + Etiquetas)</h3>
+            </div>
+            <div class="idea-card__body">
+              <p>
+                <span class="emoji-icon">🔍</span>Combinar a visão computacional
+                para contagem geral e detecção de espaços vazios com a leitura
+                de etiquetas (QR/RFID) para identificar detalhes específicos
+                como lote e validade quando um item é adicionado/removido.
+              </p>
+              <div class="priority-tag priority-high">Inovação Chave</div>
+              <strong>🛠️ Tecnologias/Considerações:</strong>
+              <ul class="tech-list">
+                <li>OpenCV <span class="pill">Visão Computacional</span></li>
+                <li>YOLOv5/YOLOv8 ou SSD (para detecção de caixas/frascos)</li>
+                <li>Biblioteca ZBar (para leitura de QR Code)</li>
+                <li>
+                  Leitor RFID + Biblioteca Python para RFID (se usar RFID)
+                </li>
+                <li>
+                  Lógica de conciliação (o que a câmera vê vs. o que a etiqueta
+                  diz)
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="idea-card">
+            <div class="idea-card__header">
+              <h3>Ideia 2: Detecção de Anomalias no Acesso ao Estoque</h3>
+            </div>
+            <div class="idea-card__body">
+              <p>
+                Usar as câmeras não só para o estoque, mas para detectar padrões
+                incomuns de acesso (ex: acesso fora de horário, permanência
+                prolongada), gerando alertas de segurança.
+              </p>
+              <strong>Tecnologias/Considerações:</strong>
+              <ul class="tech-list">
+                <li>Detecção de movimento (OpenCV)</li>
+                <li>
+                  Reconhecimento facial básico (pode ser complexo - avaliar
+                  viabilidade/privacidade)
+                </li>
+                <li>Algoritmos de detecção de anomalias em séries temporais</li>
+                <li>
+                  Integração com sistema de controle de acesso do hospital (se
+                  existir)
+                </li>
+              </ul>
+              <div class="priority-tag priority-high">Alta Prioridade</div>
+            </div>
+          </div>
+
+          <div class="idea-card">
+            <div class="idea-card__header">
+              <h3>Ideia 3: Dashboard Interativo com Drill-Down</h3>
+            </div>
+            <div class="idea-card__body">
+              <p>
+                Permitir que no dashboard o usuário clique em uma
+                prateleira/área visualizada pela câmera e veja detalhes dos
+                medicamentos ali presentes, incluindo níveis e alertas
+                específicos daquela área.
+              </p>
+              <strong>Tecnologias/Considerações:</strong>
+              <ul class="tech-list">
+                <li>React / Vue / Angular (para front-end dinâmico)</li>
+                <li>Chart.js / D3.js (para gráficos)</li>
+                <li>
+                  Leaflet (se quiser mapear a área do estoque como um "mapa")
+                </li>
+                <li>API no back-end para fornecer dados por zona/prateleira</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="idea-card">
+            <div class="idea-card__header">
+              <h3>Ideia 4: Alertas Preditivos de Falta</h3>
+            </div>
+            <div class="idea-card__body">
+              <p>
+                Analisar o histórico de consumo de cada medicamento para prever
+                quando ele provavelmente atingirá o nível mínimo, alertando com
+                antecedência, não apenas quando já está baixo.
+              </p>
+              <strong>Tecnologias/Considerações:</strong>
+              <ul class="tech-list">
+                <li>Modelos de séries temporais (ARIMA, Prophet)</li>
+                <li>Python com Pandas, Scikit-learn, Statsmodels</li>
+                <li>
+                  Banco de dados otimizado para consulta de histórico
+                  (Time-series DB)
+                </li>
+                <li>Cálculo de taxa de consumo média/mediana</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="idea-card">
+            <div class="idea-card__header">
+              <h3>
+                Ideia 5: Integração com Sistema de Prescrição Eletrônica (PEP)
+              </h3>
+            </div>
+            <div class="idea-card__body">
+              <p>
+                Se o hospital tiver um PEP, integrar para que a saída de
+                medicamentos seja automaticamente registrada quando dispensado
+                via prescrição, cruzando com a contagem física.
+              </p>
+              <strong>Tecnologias/Considerações:</strong>
+              <ul class="tech-list">
+                <li>APIs do PEP do hospital (protocolos HL7, FHIR)</li>
+                <li>Webhooks (se o PEP suportar)</li>
+                <li>
+                  Sistema de filas (RabbitMQ, Kafka) para processar integrações
+                </li>
+                <li>
+                  Mecanismo de resolução de conflitos (PEP diz X, câmera diz Y)
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="idea-card">
+            <div class="idea-card__header">
+              <h3>Ideia 6: Otimização da Disposição Física no Estoque</h3>
+            </div>
+            <div class="idea-card__body">
+              <p>
+                O sistema poderia sugerir uma melhor organização física dos
+                medicamentos nas prateleiras com base na frequência de uso, data
+                de validade (PEPS/PVPS) ou afinidade.
+              </p>
+              <strong>Tecnologias/Considerações:</strong>
+              <ul class="tech-list">
+                <li>
+                  Algoritmos de otimização (heurísticas, algoritmos genéticos)
+                </li>
+                <li>Análise de dados de consumo histórico</li>
+                <li>Regras de negócio específicas do hospital</li>
+                <li>Interface visual para mostrar o layout sugerido</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="idea-card">
+            <div class="idea-card__header">
+              <h3>Ideia 7: Controle de Condições Ambientais</h3>
+            </div>
+            <div class="idea-card__body">
+              <p>
+                Integrar sensores de temperatura e umidade nas áreas de estoque
+                (especialmente para termolábeis) e exibir essas informações no
+                dashboard, gerando alertas se saírem da faixa ideal.
+              </p>
+              <strong>Tecnologias/Considerações:</strong>
+              <ul class="tech-list">
+                <li>Sensores IoT (DHT22, BME280) com ESP32/Raspberry Pi</li>
+                <li>Protocolo MQTT para comunicação dos sensores</li>
+                <li>
+                  Banco de dados para armazenar leituras (Time-series DB ideal)
+                </li>
+                <li>
+                  Visualização de gráficos de temperatura/umidade no dashboard
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="idea-card">
+            <div class="idea-card__header">
+              <h3>
+                Ideia 8: Aplicativo Móvel Simplificado para Consulta Rápida
+              </h3>
+            </div>
+            <div class="idea-card__body">
+              <p>
+                Um app simples (ou versão web responsiva) para que a equipe de
+                farmácia/enfermagem possa consultar rapidamente a localização ou
+                quantidade de um medicamento específico.
+              </p>
+              <strong>Tecnologias/Considerações:</strong>
+              <ul class="tech-list">
+                <li>React Native / Flutter (para app multiplataforma)</li>
+                <li>Progressive Web App (PWA)</li>
+                <li>API otimizada para mobile</li>
+                <li>Funcionalidade de busca eficiente</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="idea-card">
+            <div class="idea-card__header">
+              <h3>Ideia 9: Treinamento com Dados Sintéticos</h3>
+            </div>
+            <div class="idea-card__body">
+              <p>
+                Gerar imagens sintéticas de prateleiras e medicamentos para
+                aumentar o dataset de treinamento do modelo de visão
+                computacional, especialmente para itens raros ou novos.
+              </p>
+              <strong>Tecnologias/Considerações:</strong>
+              <ul class="tech-list">
+                <li>Blender / Unity (para criar cenas 3D)</li>
+                <li>Técnicas de Data Augmentation (OpenCV, Albumentations)</li>
+                <li>Generative Adversarial Networks (GANs) - mais avançado</li>
+                <li>
+                  Validação cuidadosa para garantir que o modelo generalize
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="idea-card">
+            <div class="idea-card__header">
+              <h3>Ideia 10: Relatórios Gerenciais Detalhados</h3>
+            </div>
+            <div class="idea-card__body">
+              <p>
+                Gerar relatórios sobre consumo por setor, medicamentos próximos
+                ao vencimento, custos de estoque, perdas, eficiência da
+                reposição, etc.
+              </p>
+              <strong>Tecnologias/Considerações:</strong>
+              <ul class="tech-list">
+                <li>Bibliotecas de geração de PDF (ReportLab, FPDF)</li>
+                <li>Exportação para CSV/Excel (Pandas)</li>
+                <li>
+                  Ferramentas de BI (Metabase, Power BI - se a escala permitir)
+                </li>
+                <li>
+                  Consultas SQL complexas ou agregação de dados no back-end
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="idea-card">
+            <div class="idea-card__header">
+              <h3>Ideia 11: Gamificação para Engajamento da Equipe</h3>
+            </div>
+            <div class="idea-card__body">
+              <p>
+                Pequenos elementos de gamificação no dashboard ou em relatórios
+                para incentivar boas práticas de gestão de estoque (ex: menor
+                taxa de vencimento, organização das prateleiras).
+              </p>
+              <strong>Tecnologias/Considerações:</strong>
+              <ul class="tech-list">
+                <li>Sistema de pontos/badges</li>
+                <li>Rankings (se aplicável e culturalmente aceito)</li>
+                <li>Metas visuais e acompanhamento de progresso</li>
+                <li>Design cuidadoso para não infantilizar a tarefa</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="idea-card">
+            <div class="idea-card__header">
+              <h3>Ideia 12: Simulação e Teste em Ambiente Virtual</h3>
+            </div>
+            <div class="idea-card__body">
+              <p>
+                Antes de instalar no hospital, criar um ambiente de simulação
+                (digital twin ou maquete física) para testar a calibração das
+                câmeras, o desempenho da IA e o fluxo de trabalho.
+              </p>
+              <strong>Tecnologias/Considerações:</strong>
+              <ul class="tech-list">
+                <li>Software de simulação 3D (Blender, Gazebo)</li>
+                <li>Impressão 3D para criar modelos de embalagens</li>
+                <li>Webcam comum para simular as câmeras de vigilância</li>
+                <li>
+                  Geração de dados de teste para simular entradas e saídas
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <h2 id="python" class="section-title">
+          Implementação em Python: Protótipo Funcional
+        </h2>
+
+        <div class="card">
+          <h2>🐍 Estrutura do Projeto Python</h2>
+          <p>
+            O protótipo funcional deve seguir uma arquitetura modular que
+            facilite a manutenção e ampliação. Veja abaixo uma proposta de
+            estrutura de arquivos para o projeto:
+          </p>
+
+          <div class="code-block">
+            <div class="code-header">
+              <h4>Estrutura de Diretórios</h4>
+            </div>
+            <div class="code-content">
+              /stocam_project<br />
+              ├── main.py
+              <span class="comment"># Ponto de entrada da aplicação</span><br />
+              ├── requirements.txt
+              <span class="comment"># Dependências do projeto</span><br />
+              ├── README.md <span class="comment"># Documentação</span><br />
+              ├── /modules<br />
+              │ ├── __init__.py<br />
+              │ ├── inventory.py
+              <span class="comment"># Classe de gerenciamento de estoque</span
+              ><br />
+              │ ├── camera.py
+              <span class="comment"># Integração com câmeras</span><br />
+              │ ├── ai_vision.py
+              <span class="comment"># Algoritmos de visão computacional</span
+              ><br />
+              │ ├── alerts.py <span class="comment"># Sistema de alertas</span
+              ><br />
+              │ └── reports.py
+              <span class="comment"># Geração de relatórios</span><br />
+              ├── /utils<br />
+              │ ├── __init__.py<br />
+              │ ├── db_manager.py
+              <span class="comment"># Gerenciamento de banco de dados</span
+              ><br />
+              │ └── helpers.py <span class="comment"># Funções auxiliares</span
+              ><br />
+              └── /ui<br />
+              ├── __init__.py<br />
+              ├── dashboard.py
+              <span class="comment"># Interface do dashboard</span><br />
+              └── settings.py
+              <span class="comment"># Configurações da interface</span><br />
+            </div>
+          </div>
+
+          <h3>Exemplo de Implementação da Classe de Estoque</h3>
+
+          <div class="code-block">
+            <div class="code-header">
+              <h4>inventory.py</h4>
+            </div>
+            <div class="code-content">
+              <span class="keyword">class</span>
+              <span class="class">MedicationItem</span>:
+              <span class="keyword">def</span>
+              <span class="function">__init__</span>(self, id, name, quantity,
+              exp_date, location):
+              <span class="comment"
+                ># Inicializa um item do estoque com suas propriedades
+                básicas</span
+              >
+              self.id = id self.name = name self.quantity = quantity
+              self.exp_date = exp_date
+              <span class="comment"># Data de validade</span> self.location =
+              location
+              <span class="comment"># Localização física no estoque</span>
+              self.history = []
+              <span class="comment"># Histórico de movimentações</span>
+
+              <span class="keyword">def</span>
+              <span class="function">update_quantity</span>(self, amount,
+              operation_type, user):
+              <span class="comment"
+                ># Atualiza a quantidade do medicamento e registra no
+                histórico</span
+              >
+              prev_quantity = self.quantity
+
+              <span class="keyword">if</span> operation_type ==
+              <span class="string">"add"</span>: self.quantity += amount
+              <span class="keyword">elif</span> operation_type ==
+              <span class="string">"remove"</span>:
+              <span class="keyword">if</span> self.quantity >= amount:
+              self.quantity -= amount <span class="keyword">else</span>:
+              <span class="keyword">return</span>
+              <span class="keyword">False</span>
+
+              <span class="comment"># Registra operação no histórico</span>
+              self.history.append({
+              <span class="string">"timestamp"</span>:
+              <span class="function">datetime.now()</span>,
+              <span class="string">"user"</span>: user,
+              <span class="string">"operation"</span>: operation_type,
+              <span class="string">"amount"</span>: amount,
+              <span class="string">"previous"</span>: prev_quantity,
+              <span class="string">"current"</span>: self.quantity })
+
+              <span class="keyword">return</span>
+              <span class="keyword">True</span>
+
+              <span class="keyword">def</span>
+              <span class="function">is_expired</span>(self):
+              <span class="comment"
+                ># Verifica se o medicamento está vencido</span
+              >
+              <span class="keyword">return</span>
+              <span class="function">datetime.now()</span>.date() >
+              self.exp_date
+
+              <span class="keyword">def</span>
+              <span class="function">days_until_expiry</span>(self):
+              <span class="comment"># Calcula dias até o vencimento</span>
+              delta = self.exp_date -
+              <span class="function">datetime.now()</span>.date()
+              <span class="keyword">return</span> delta.days
+            </div>
+          </div>
+
+          <div class="code-block">
+            <div class="code-header">
+              <h4>Classe de Gerenciamento de Estoque</h4>
+            </div>
+            <div class="code-content">
+              <span class="keyword">class</span>
+              <span class="class">InventoryManager</span>:
+              <span class="keyword">def</span>
+              <span class="function">__init__</span>(self): self.medications =
+              {}
+              <span class="comment"># Dicionário com id como chave</span>
+              self.alerts = []
+              <span class="comment"># Lista de alertas ativos</span>
+
+              <span class="keyword">def</span>
+              <span class="function">add_medication</span>(self, medication):
+              <span class="comment"
+                ># Adiciona um novo medicamento ao estoque</span
+              >
+              <span class="keyword">if</span> medication.id
+              <span class="keyword">in</span> self.medications:
+              <span class="keyword">return</span>
+              <span class="keyword">False</span>
+
+              self.medications[medication.id] = medication
+
+              <span class="comment"># Verificações automáticas</span>
+              self.<span class="function">check_expiry_alert</span>(medication)
+              self.<span class="function">check_low_stock_alert</span
+              >(medication)
+
+              <span class="keyword">return</span>
+              <span class="keyword">True</span>
+
+              <span class="keyword">def</span>
+              <span class="function">get_medication</span>(self, id):
+              <span class="keyword">return</span> self.medications.get(id)
+
+              <span class="keyword">def</span>
+              <span class="function">update_from_camera</span>(self,
+              camera_data):
+              <span class="comment"
+                ># Atualiza estoque com base nos dados da câmera</span
+              >
+              <span class="keyword">for</span> med_id, count
+              <span class="keyword">in</span> camera_data.items():
+              <span class="keyword">if</span> med_id
+              <span class="keyword">in</span> self.medications: current_count =
+              self.medications[med_id].quantity
+
+              <span class="comment"># Se houver discrepância</span>
+              <span class="keyword">if</span> current_count != count:
+              <span class="comment"
+                ># Registra a discrepância e cria um alerta</span
+              >
+              self.alerts.append({
+              <span class="string">"type"</span>:
+              <span class="string">"discrepancy"</span>,
+              <span class="string">"medication_id"</span>: med_id,
+              <span class="string">"system_count"</span>: current_count,
+              <span class="string">"camera_count"</span>: count,
+              <span class="string">"timestamp"</span>:
+              <span class="function">datetime.now()</span>
+              })
+
+              <span class="keyword">def</span>
+              <span class="function">check_expiry_alert</span>(self,
+              medication):
+              <span class="comment"
+                ># Verifica se o medicamento está próximo ao vencimento</span
+              >
+              days = medication.<span class="function">days_until_expiry</span
+              >()
+
+              <span class="keyword">if</span> days <=
+              <span class="number">0</span>: self.alerts.append({
+              <span class="string">"type"</span>:
+              <span class="string">"expired"</span>,
+              <span class="string">"medication_id"</span>: medication.id,
+              <span class="string">"priority"</span>:
+              <span class="string">"high"</span>,
+              <span class="string">"message"</span>:
+              <span class="string"
+                >f"Medicamento {medication.name} VENCIDO!"</span
+              >
+              })
+              <span class="keyword">elif</span> days <=
+              <span class="number">30</span>: self.alerts.append({
+              <span class="string">"type"</span>:
+              <span class="string">"expiring_soon"</span>,
+              <span class="string">"medication_id"</span>: medication.id,
+              <span class="string">"priority"</span>:
+              <span class="string">"medium"</span>,
+              <span class="string">"message"</span>:
+              <span class="string"
+                >f"Medicamento {medication.name} vence em {days} dias"</span
+              >
+              })
+            </div>
+          </div>
+
+          <div class="diagram-container">
+            <h3 class="diagram-title">Fluxo de Processamento do Sistema</h3>
+            <div class="diagram-content">
+              <div class="workflow-diagram">
+                <div class="diagram-node">
+                  <h5>Captura de Imagem</h5>
+                  <p>Câmeras capturam imagem do estoque</p>
+                </div>
+                <div class="diagram-node">
+                  <h5>Processamento</h5>
+                  <p>IA identifica e conta medicamentos</p>
+                </div>
+                <div class="diagram-node">
+                  <h5>Atualização</h5>
+                  <p>Banco de dados atualizado com informações</p>
+                </div>
+                <div class="diagram-node">
+                  <h5>Análise</h5>
+                  <p>Sistema verifica níveis e validades</p>
+                </div>
+                <div class="diagram-node">
+                  <h5>Alertas</h5>
+                  <p>Geração de alertas automáticos</p>
+                </div>
+                <div class="diagram-node">
+                  <h5>Dashboard</h5>
+                  <p>Visualização em tempo real</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card" id="ct">
+          <h2>🧠 Boas Práticas de Python & Computational Thinking</h2>
+          <div class="info-box">
+            <strong>📌 Estruturação do Código:</strong>
+            <ul class="tech-list">
+              <li>
+                <span class="pill">Boa Prática</span> Dividir o sistema em
+                módulos (estoque.py, alertas.py, relatorios.py)
+              </li>
+              <li>
+                <span class="pill">CT Concept</span> Decomposição do problema em
+                sub-funções especializadas
+              </li>
+              <li>
+                <span class="pill">Python Tip</span> Usar Type Hints para melhor
+                documentação
+              </li>
+            </ul>
+          </div>
+
+          <div class="info-box">
+            <strong>⚙️ Manipulação de Dados:</strong>
+            <ul class="tech-list">
+              <li>
+                <span class="pill">Listas</span> Usar list comprehensions para
+                processamento eficiente
+              </li>
+              <li>
+                <span class="pill">Strings</span> F-strings para formatação
+                clara (f"Validade: {validade:%d/%m/%Y}")
+              </li>
+              <li>
+                <span class="pill">Dicionários</span> Estruturar dados de
+                medicamentos como objetos
+              </li>
+            </ul>
+          </div>
+
+          <div class="info-box">
+            <strong>🔍 Aplicação de CT:</strong>
+            <div class="timeline">
+              <div class="timeline-item">
+                <span class="phase-badge">1</span>
+                <strong>Decomposição:</strong> Dividir o sistema em componentes
+                (controle, alertas, UI)
+                <div class="priority-tag priority-high">Abstração</div>
+              </div>
+              <div class="timeline-item">
+                <span class="phase-badge">2</span>
+                <strong>Reconhecimento de Padrões:</strong> Identificar padrões
+                de consumo para previsão
+                <div class="priority-tag priority-medium">Análise</div>
+              </div>
+              <div class="timeline-item">
+                <span class="phase-badge">3</span>
+                <strong>Abstração:</strong> Modelar entidades principais
+                (Medicamento, Estoque, Sensor)
+                <div class="priority-tag priority-high">OOP</div>
+              </div>
+              <div class="timeline-item">
+                <span class="phase-badge">4</span>
+                <strong>Algoritmos:</strong> Desenvolver fluxos para alertas e
+                relatórios
+                <div class="priority-tag priority-medium">Lógica</div>
+              </div>
+            </div>
+          </div>
+
+          <h3>📋 Checklist de Implementação</h3>
+          <ul class="tech-list">
+            <li>
+              <span class="pill">Funções</span> Criar funções com
+              responsabilidade única
+            </li>
+            <li>
+              <span class="pill">Validação</span> Implementar try/except para
+              operações críticas
+            </li>
+            <li>
+              <span class="pill">Documentação</span> Incluir docstrings em todas
+              as funções
+            </li>
+            <li>
+              <span class="pill">Testes</span> Desenvolver casos de teste para
+              cada módulo
+            </li>
+            <li>
+              <span class="pill">Git</span> Commits atômicos com mensagens
+              descritivas
+            </li>
+          </ul>
+        </div>
+
+        <div id="consideracoes" class="considerations card">
+          <h2>⚠️ Considerações Críticas</h2>
+          <ul>
+            <li>
+              <span class="status-indicator status-yellow"></span>
+              <strong>Iluminação do Estoque:</strong> Performance da visão
+              computacional depende MUITO da iluminação. Ela é constante? Há
+              sombras? Pode ser necessário sugerir melhorias na iluminação ou
+              usar câmeras com infravermelho.
+              <div class="info-box">
+                <strong>💡 Sugestão:</strong>
+                Implementar sistema de iluminação auxiliar com sensores
+                automáticos
+              </div>
+            </li>
+            <li>
+              <span class="status-indicator status-red"></span>
+              <strong>Calibração das Câmeras:</strong> Definir um processo para
+              calibrar as câmeras (distorção da lente, perspectiva) para que a
+              contagem e localização sejam precisas.
+              <div class="info-box">
+                <strong>🛠️ Solução Proposta:</strong>
+                Desenvolver protocolo de calibração semanal automatizado
+              </div>
+            </li>
+            <li>
+              <span class="status-indicator status-yellow"></span>
+              <strong>Processamento das Imagens:</strong> O processamento de IA
+              será feito localmente (Edge Computing, ex: Jetson Nano) ou na
+              nuvem? Isso impacta custo, latência e privacidade.
+            </li>
+            <li>
+              <span class="status-indicator status-yellow"></span>
+              <strong>Manutenção do Sistema:</strong> Quem vai atualizar o
+              software, recalibrar câmeras, treinar o modelo para novos
+              medicamentos?
+            </li>
+            <li>
+              <span class="status-indicator status-yellow"></span>
+              <strong>Resistência à Mudança:</strong> Como a equipe do hospital
+              vai receber o novo sistema? Treinamento e comunicação são
+              essenciais.
+            </li>
+            <li>
+              <span class="status-indicator status-yellow"></span>
+              <strong>Backup e Recuperação:</strong> Como garantir que os dados
+              de estoque não sejam perdidos em caso de falha?
+            </li>
+          </ul>
+        </div>
+      </main>
     </div>
 
-    <div class="section">
-      <h2>Principais Recursos</h2>
-      <ul>
-        <li>
-          <strong>Monitoramento por Câmeras:</strong> Sistema de câmeras para
-          monitorar o estoque de medicamentos.
-        </li>
-        <li>
-          <strong>Análise com IA:</strong> Uso de inteligência artificial para
-          detectar níveis de estoque e gerar alertas.
-        </li>
-        <li>
-          <strong>Etiquetas Rastreáveis:</strong> Sistema de etiquetagem para
-          rastreamento de medicamentos.
-        </li>
-        <li>
-          <strong>Dashboard:</strong> Interface para visualização dos dados de
-          estoque.
-        </li>
-      </ul>
-    </div>
-
-    <div class="section">
-      <h2>O que Precisamos Fazer</h2>
-      <ol>
-        <li>Definir requisitos do sistema (prazos, funcionalidades)</li>
-        <li>Pesquisar tecnologias de visão computacional aplicáveis</li>
-        <li>Criar protótipos da interface</li>
-        <li>Modelar o banco de dados</li>
-        <li>Desenvolver os algoritmos de IA para reconhecimento</li>
-        <li>Implementar o sistema (back-end e front-end)</li>
-        <li>Testar o sistema com dados reais</li>
-        <li>Preparar apresentação final</li>
-      </ol>
-    </div>
-
-    <div class="section">
-      <h2>Dicas e Sugestões</h2>
-
-      <div class="tip">
-        <h3>Tecnologias de Visão Computacional</h3>
-        <p>
-          Para reconhecimento de medicamentos e contagem de estoque, considere
-          usar:
-        </p>
-        <ul>
-          <li>
-            <strong>OpenCV:</strong> Biblioteca com funções de processamento de
-            imagem e detecção de objetos
-          </li>
-          <li>
-            <strong>TensorFlow/PyTorch:</strong> Para modelos de deep learning
-            se precisar de reconhecimento mais avançado
-          </li>
-          <li>
-            <strong>YOLO (You Only Look Once):</strong> Ótimo para detecção de
-            objetos em tempo real
-          </li>
-        </ul>
+    <footer>
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>Entregáveis do Projeto</h3>
+          <ul>
+            <li>
+              <span class="emoji-icon">📄</span> Documentação Técnica em Python
+              (20 pontos)
+            </li>
+            <li>
+              <span class="emoji-icon">🎬</span> Vídeo Explicativo de 5 minutos
+              (20 pontos)
+            </li>
+            <li>
+              <span class="emoji-icon">💻</span> Protótipo Funcional em Python
+              (60 pontos)
+            </li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Prazo de Entrega</h3>
+          <p>
+            Projeto a ser finalizado e apresentado conforme cronograma
+            acadêmico.
+          </p>
+        </div>
+        <div class="footer-section">
+          <h3>Equipe</h3>
+          <p>
+            Desenvolvido por alunos do curso Computational Thinking with Python
+          </p>
+          <p>Hospital Sabará - 2023</p>
+        </div>
       </div>
-
-      <div class="tip">
-        <h3>Etiquetagem e Identificação</h3>
-        <p>Para identificação eficiente de medicamentos:</p>
-        <ul>
-          <li>
-            <strong>Códigos QR:</strong> Mais informações que códigos de barras
-            e fáceis de ler com câmeras
-          </li>
-          <li>
-            <strong>RFID:</strong> Possibilidade de leitura sem linha de visão
-            direta
-          </li>
-          <li>
-            <strong>Etiquetas coloridas:</strong> Sistema de cores para
-            categorização rápida
-          </li>
-        </ul>
+      <div class="footer-bottom">
+        <p>&copy; 2023 STOCAM - Todos os direitos reservados</p>
       </div>
+    </footer>
 
-      <div class="tip">
-        <h3>Armazenamento de Dados</h3>
-        <p>Para o banco de dados, considere:</p>
-        <ul>
-          <li>
-            <strong>PostgreSQL/MySQL:</strong> Para dados estruturados
-            (informações de medicamentos, inventário)
-          </li>
-          <li>
-            <strong>MongoDB:</strong> Para dados não estruturados (logs, dados
-            de sensores)
-          </li>
-          <li>
-            <strong>Time-series DB:</strong> Para monitoramento contínuo e
-            histórico de alterações no tempo
-          </li>
-        </ul>
-      </div>
-
-      <div class="tip">
-        <h3>UI/UX do Dashboard</h3>
-        <p>Para uma interface eficiente:</p>
-        <ul>
-          <li>
-            Priorize informações críticas (medicamentos abaixo do nível mínimo)
-          </li>
-          <li>Use gráficos para visualização de tendências de consumo</li>
-          <li>
-            Inclua sistema de alertas visuais por cores (vermelho para crítico,
-            amarelo para atenção)
-          </li>
-          <li>Considere responsividade para acesso via dispositivos móveis</li>
-        </ul>
-      </div>
-
-      <div class="tip">
-        <h3>Segurança e Privacidade</h3>
-        <p>Pontos importantes a considerar:</p>
-        <ul>
-          <li>Criptografia para dados sensíveis de medicamentos</li>
-          <li>
-            Controle de acesso baseado em função (quem pode ver quais
-            informações)
-          </li>
-          <li>Registro de auditoria de todas as interações com o sistema</li>
-          <li>
-            Conformidade com regulamentações de saúde (ex: LGPD, normas da
-            ANVISA)
-          </li>
-        </ul>
-      </div>
-
-      <div class="tip">
-        <h3>Fontes de Pesquisa Úteis</h3>
-        <ul>
-          <li>Artigos científicos sobre gestão de estoque hospitalar</li>
-          <li>Documentação de APIs de processamento de imagem</li>
-          <li>Normas técnicas para medicamentos e controle hospitalar</li>
-          <li>Estudos de caso de implementações similares</li>
-        </ul>
-      </div>
-    </div>
+    <script src="js/main.js"></script>
   </body>
 </html>
