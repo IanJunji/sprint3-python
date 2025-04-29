@@ -1,3 +1,5 @@
+import openpyxl
+
 estoque = {
     'nome': ['lol', 'dota', 'cs'],
     'quantidade': [1, 3, 6],
@@ -36,12 +38,25 @@ def atualizar():
     print('Estoque atual:')
     print(estoque)
     escolha = forca_opcao('Qual item deseja atualizar?', estoque['nome'])
-    atributo = forca_opcao(f'Qual atributo do(a) {escolha} deseja mudar?', ['quantidade', 'tipo'])
+    indices = atualiza_indices()
+    indice = indices[escolha]
+    atributo = forca_opcao(f'Qual atributo do(a) {escolha} deseja mudar?', ['nome', 'quantidade', 'tipo'])
+    if atributo == 'nome':
+        novo_nome = input('Novo nome: ')
+        estoque[escolha][indice] = novo_nome
+        print(f'Nome atualizado para: {novo_nome}')
     if atributo == 'quantidade':
-        
-    
-        novo_item = input(f'Novo(a) {key}: ')
-        estoque[key].append(novo_item)
+        nova_quantidade = input(f'Nova quantidade (+/-): ')
+        while not nova_quantidade.startswith('+' or '-') and not nova_quantidade[-1].isnumeric() and not nova_quantidade >= estoque[escolha][indice]:
+            print('Valor invalido, por favor tente novamente.')
+            nova_quantidade = input(f'Nova quantidade (+/-): ')
+        if nova_quantidade.startswith('-'):
+            estoque[escolha][indice] -= nova_quantidade
+        else:
+            estoque[escolha][indice] += nova_quantidade
+            
+
+
 
 def atualiza_indices():
     indices = {estoque['nome'][i]: i for i in range(len(estoque['nome']))}
