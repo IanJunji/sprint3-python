@@ -73,11 +73,20 @@ def remover():
     print('Estoque atualizado:')
     print(estoque)
 
+# def visualizar():
+#     print('Estoque atual:')
+#     print(estoque)
+
 def visualizar():
-    print('Estoque atual:')
-    print(estoque)
-
-
+    print("\n=== Estoque Atual ===")
+    print(f"{'Nome':<15} {'Quantidade':<10} {'Tipo':<10}")
+    print("-" * 37)
+    for i in range(len(estoque['nome'])):
+        nome = estoque['nome'][i]
+        quantidade = estoque['quantidade'][i]
+        tipo = estoque['tipo'][i]
+        print(f"{nome:<15} {quantidade:<10} {tipo:<10}")
+    print("-" * 37)
 
 print('Sistema de estoque:')
 
