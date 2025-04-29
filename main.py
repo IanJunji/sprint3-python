@@ -1,5 +1,3 @@
-import openpyxl
-
 estoque = {
     'nome': ['lol', 'dota', 'cs'],
     'quantidade': [1, 3, 6],
@@ -55,9 +53,6 @@ def atualizar():
         else:
             estoque[escolha][indice] += nova_quantidade
             
-
-
-
 def atualiza_indices():
     indices = {estoque['nome'][i]: i for i in range(len(estoque['nome']))}
     return indices
