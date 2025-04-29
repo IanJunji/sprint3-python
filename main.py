@@ -34,16 +34,28 @@ def remover():
     print('Estoque atualizado:')
     print(estoque)
 
+def visualizar():
+    print('Estoque atual:')
+    print(estoque)
+
+
+
 print('Sistema de estoque:')
-escolha = forca_opcao('Qual operação deseja realizar?', ['adicionar', 'remover', 'atualizar', 'visualizar'])
-if escolha == 'adicionar':
-    adicionar()
-elif escolha == 'remover':
-    remover()
-elif escolha == 'atualizar':
-    atualizar()
-elif escolha == 'visualizar':
-    visualizar()
+
+while True:
+    escolha = forca_opcao('Qual operação deseja realizar?', ['adicionar', 'remover', 'atualizar', 'visualizar', 'sair'])
+    if escolha == 'adicionar':
+        adicionar()
+    elif escolha == 'remover':
+        remover()
+    elif escolha == 'atualizar':
+        atualizar()
+    elif escolha == 'visualizar':
+        visualizar()
+    elif escolha == 'sair':
+        print('Saindo do sistema...')
+        break
+
 
 
 print(estoque)
